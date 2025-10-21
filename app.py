@@ -3,11 +3,11 @@ from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationSummaryBufferMemory
-from openai import openai
+import openai
 import os
 
 # ✅ Securely set your OpenAI key (best: use st.secrets or system env)
-#openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # 🧠 Streamlit App
 def main():
